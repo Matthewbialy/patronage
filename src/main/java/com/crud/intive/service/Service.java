@@ -1,8 +1,7 @@
 package com.crud.intive.service;
 
-import com.crud.intive.domain.Distance;
-import com.crud.intive.domain.Velocity;
-import com.crud.intive.repository.Repository;
+import com.crud.intive.domain.Database;
+import com.crud.intive.repository.DatabaseDao;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
@@ -11,17 +10,11 @@ import java.util.List;
 public class Service {
 
     @Autowired
-    private Repository repository;
+    private DatabaseDao databaseDao;
 
-    public List<Velocity> getAll() {
-        return repository.findAll();
+    public List<Database> getAll() {
+        return databaseDao.findAll();
     }
 
-    public Velocity saveAll(final Velocity velocity) {
-        return repository.save(velocity);
-    }
 
-    public Distance saveDistance(final Distance distance) {
-        return repository.save(distance);
-    }
 }

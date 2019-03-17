@@ -1,7 +1,6 @@
 package com.crud.intive.controller;
 
-import com.crud.intive.domain.Distance;
-import com.crud.intive.domain.Velocity;
+import com.crud.intive.domain.Database;
 import com.crud.intive.service.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -21,13 +20,13 @@ public class Controller {
     @Autowired
     private Service service;
 
-    @RequestMapping(method = RequestMethod.GET, value = "getVelocity", consumes = APPLICATION_JSON_VALUE)
-    public List<Velocity> getVelocity(@RequestBody Velocity velocity) {
+    @RequestMapping(method = RequestMethod.GET, value = "VELOCITY", consumes = APPLICATION_JSON_VALUE)
+    public List<Database> velocityValue (@RequestBody Database database) {
         return new ArrayList<>();
 
     }
-    @RequestMapping(method = RequestMethod.GET, value = "getDistance", consumes = APPLICATION_JSON_VALUE)
-    public List<Distance> getDistance(@RequestBody Distance distance) {
+    @RequestMapping(method = RequestMethod.GET, value = "DISTANCE", consumes = APPLICATION_JSON_VALUE)
+    public List<Database> distanceValue(@RequestBody Database database) {
         return new ArrayList<>();
     }
 }
